@@ -349,3 +349,14 @@ describeColor('blue');
 describeColor('purple');
 describeColor('black');
 describeColor('white');
+
+
+function checkPassword(password) {
+    const legalCharechters = (/(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])[a-zA-Z0-9]{8,}/g);
+    let ispasswordsafe = legalCharechters.test(password);
+    if (ispasswordsafe) console.log('strong password');
+    else console.log('weak password');
+}
+checkPassword(12345);
+checkPassword('12345a67A8');
+checkPassword(abcdefghij);
